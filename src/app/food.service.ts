@@ -8,7 +8,7 @@ export class FoodService {
 
   constructor() { }
 
-  public getAll() {
+  public getAll(): Food[] {
     return [
       new Food(0, "Hambi", 99.99, "Hambi salival es husival"),
       new Food(1, "Sali", 77.99, "Friss sali"),
