@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Food} from '../food.model';
+import { FoodService } from '../food.service';
 
 @Component({
   selector: 'app-food-list',
@@ -9,9 +10,10 @@ import {Food} from '../food.model';
 export class FoodListComponent implements OnInit {
   foodList: Food[];
 
-  constructor() { }
+  constructor(private foodService: FoodService) { }
 
   ngOnInit() {
+    this.foodList = this.foodService.getAll();
   }
 
 }

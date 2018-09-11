@@ -10,6 +10,7 @@ import { OrderBoardComponent } from './order-board/order-board.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { FoodComponent } from './food/food.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FoodService } from './food.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     NgbModule
   ],
-  providers: [],
+  providers: [FoodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
