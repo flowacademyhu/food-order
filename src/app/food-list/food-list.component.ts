@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Food} from '../food.model';
 import { FoodService } from '../food.service';
 
@@ -8,12 +8,12 @@ import { FoodService } from '../food.service';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
+  @Input()
   foodList: Food[];
 
-  constructor(private foodService: FoodService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.foodList = this.foodService.getAll();
   }
 
 }

@@ -1,4 +1,5 @@
 <div class="row">
+  <h1>{{foodList.length > 0 ? foodList[0].type : ''}}</h1>
   <div class="col-xs-4">
     <div class="list-group-item clearfix" *ngFor="let food of foodList">
       <app-food [food]="food"></app-food>
