@@ -12,6 +12,7 @@ import { FoodComponent } from './food/food.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ContactComponent } from './contact/contact.component';
 import { FoodService } from './food.service';
+import { FoodTypeFilterPipe } from './food-type-filter.pipe';
 
 const routes: Routes = [
   { path: '', component: OrderBoardComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
     OrderBoardComponent,
     FoodListComponent,
     FoodComponent,
-    ContactComponent
+    ContactComponent,
+    FoodTypeFilterPipe
   ],
   imports: [
     BrowserModule,
