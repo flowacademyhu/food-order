@@ -15,6 +15,7 @@ import { FoodService } from './food.service';
 import { FoodTypeFilterPipe } from './food-type-filter.pipe';
 import {AppStateService} from './app-state.service';
 import { CartComponent } from './cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: OrderBoardComponent },
@@ -37,7 +38,8 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [
     FoodService,

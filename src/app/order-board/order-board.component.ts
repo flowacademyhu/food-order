@@ -8,11 +8,13 @@ import {Food, FoodType} from '../food.model';
   styleUrls: ['./order-board.component.css']
 })
 export class OrderBoardComponent implements OnInit {
-  foodList: Food[];
+  foodList: Food[] = [];
 
   constructor(private foodService: FoodService) { }
 
   ngOnInit() {
-    this.foodList = this.foodService.getAll();
+    this.foodService.getAll().subscribe((foods) => {
+      this.foodList = foods;
+    });
   }
 }

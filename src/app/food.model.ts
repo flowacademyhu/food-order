@@ -8,5 +8,7 @@ export class Food {
 }
 
 export enum FoodType {
-  Drink = 1, Food, Dessert
+  Drink = 'Drink', 
+  Food = 'Food', 
+  Dessert = 'Dessert'
 }
